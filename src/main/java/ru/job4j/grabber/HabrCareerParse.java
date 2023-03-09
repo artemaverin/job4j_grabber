@@ -42,19 +42,12 @@ public class HabrCareerParse {
 
     private String retrieveDescription(String link) {
         Connection connection = Jsoup.connect(link);
-        Document document = null;
+        String description = "";
         try {
-            document = connection.get();
+            description = connection.get().select(".vacancy-description__text").text();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Elements rows = document.select(".vacancy-description__text");
-        rows.forEach(
-                row -> {
-                    Element element = row.child(0);
-                }
-        );
-        String description = rows.text();
         return description;
     }
 }
