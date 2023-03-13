@@ -65,17 +65,21 @@ public class PsqlStore implements Store {
         try (PreparedStatement statement = cnn.prepareStatement("select * from post")) {
             try (ResultSet resultSet = statement.executeQuery()) {
                 while (resultSet.next()) {
-                    list.add(new Post(resultSet.getInt("id"),
-                            resultSet.getString("title"),
-                            resultSet.getString("link"),
-                            resultSet.getString("text"),
-                            resultSet.getTimestamp("created").toLocalDateTime()));
+                    list.add(postCreation(resultSet));
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return list;
+    }
+
+    private Post postCreation(ResultSet resultSet) throws SQLException {
+        return new Post(resultSet.getInt("id"),
+                resultSet.getString("title"),
+                resultSet.getString("link"),
+                resultSet.getString("text"),
+                resultSet.getTimestamp("created").toLocalDateTime());
     }
 
     @Override
