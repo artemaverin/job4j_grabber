@@ -98,7 +98,7 @@ public class PsqlStore implements Store {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return post;
     }
 
     public boolean deleteAll() {
@@ -120,8 +120,6 @@ public class PsqlStore implements Store {
             cnn.close();
         }
     }
-
-
 
     public static void main(String[] args) throws SQLException {
         HabrCareerParse parse = new HabrCareerParse(new HabrCareerDateTimeParser());
