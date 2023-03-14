@@ -1,7 +1,7 @@
 CREATE TABLE company
 (
     id integer NOT NULL,
-    p_name character varying,
+    c_name character varying,
     CONSTRAINT company_pkey PRIMARY KEY (id)
 );
 
