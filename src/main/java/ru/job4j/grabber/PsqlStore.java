@@ -129,5 +129,6 @@ public class PsqlStore implements Store {
             psqlStore.save(post);
         }
         psqlStore.getAll().forEach(System.out::println);
+        psqlStore.deleteAll();
     }
 }
