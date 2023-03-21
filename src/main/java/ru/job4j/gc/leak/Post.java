@@ -54,20 +54,20 @@ public class Post {
                 + '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Post post = (Post) o;
-        return Objects.equals(id, post.id) && Objects.equals(text, post.text);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, text);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) {
+//            return true;
+//        }
+//        if (o == null || getClass() != o.getClass()) {
+//            return false;
+//        }
+//        Post post = (Post) o;
+//        return Objects.equals(id, post.id) && Objects.equals(text, post.text);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(id, text);
+//    }
 }

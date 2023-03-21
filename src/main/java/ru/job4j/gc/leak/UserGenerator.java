@@ -55,4 +55,5 @@ public class UserGenerator implements Generate {
     public List<User> getUsers() {
         return this.users;
     }
+
 }

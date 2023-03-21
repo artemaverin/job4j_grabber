@@ -10,7 +10,7 @@ public class CommentGenerator implements Generate {
     public static final String PATH_PHRASES = "src/main/java/ru/job4j/gc/leak/files/phrases.txt";
 
     public static final String SEPARATOR = System.lineSeparator();
-    private static List<Comment> comments = new ArrayList<>();
+    private List<Comment> comments = new ArrayList<>();
     public static final Integer COUNT = 50;
     private List<String> phrases;
     private UserGenerator userGenerator;
@@ -30,7 +30,7 @@ public class CommentGenerator implements Generate {
         }
     }
 
-    public static List<Comment> getComments() {
+    public  List<Comment> getComments() {
         return comments;
     }
 
