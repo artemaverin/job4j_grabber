@@ -48,4 +48,5 @@ public class CommentGenerator implements Generate {
                     userGenerator.randomUser()));
         }
     }
+
 }

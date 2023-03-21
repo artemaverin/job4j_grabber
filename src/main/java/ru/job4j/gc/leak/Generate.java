@@ -16,4 +16,5 @@ public interface Generate  {
                 .forEach(text::add);
         return text;
     }
+
 }

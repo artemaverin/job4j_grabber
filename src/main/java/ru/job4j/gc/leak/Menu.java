@@ -63,7 +63,6 @@ public class Menu {
             }
         }
     }
-
     private static void createPost(CommentGenerator commentGenerator,
                                    UserGenerator userGenerator, PostStore postStore, String text) {
         userGenerator.generate();
