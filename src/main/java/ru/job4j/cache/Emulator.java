@@ -13,12 +13,11 @@ public class Emulator {
     public static final String GET = "Укажите файл для получения информации";
     public static final String EXIT = "Конец работы";
 
-    public static final String MENU = """
-                Введите 1, чтобы указать директорию.
-                Введите 2, загрузить содержимое файла.
-                Введите 3, получить содержимое файла.
-                Введите любое другое число для выхода.
-            """;
+    public static final String MENU = "Введите 1 для создание поста.\n"
+            + "Введите 1, чтобы указать директорию.\n"
+            + "Введите 2, загрузить содержимое файла.\n"
+            + "Введите 3, получить содержимое файла.\n"
+            + "Введите любое другое число для выхода.;\n";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

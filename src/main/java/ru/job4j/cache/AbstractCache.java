@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class AbstractCache<K, V> {
+
     private final Map<K, SoftReference<V>> cache = new HashMap<>();
 
     public Map<K, SoftReference<V>> getCache() {
